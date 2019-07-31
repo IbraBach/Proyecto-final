@@ -1,0 +1,56 @@
+<div class="signin-content">
+    <mat-card>
+        <mat-card-content class="signinCardContent">
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                <h4>
+                    Crear cuenta de usuario
+                </h4>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Nombre" formControlName="name" required>
+                    <mat-error *ngIf="isFieldInvalid('name')">
+                        Por favor, introduzca su nombre
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Apellido" formControlName="surname" required>
+                    <mat-error *ngIf="isFieldInvalid('surname')">
+                        Por favor, introduzca su apellido
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Correo" formControlName="email" required>
+                    <mat-error *ngIf="isFieldInvalid('email')">
+                        Por favor, introduzca un correo
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Contraseña" type="password" formControlName="password" required>
+                    <mat-error *ngIf="isFieldInvalid('password')">
+                        Por favor, introduzca una contraseña
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Dirección" formControlName="address" required>
+                    <mat-error *ngIf="isFieldInvalid('address')">
+                        Por favor, introduzca su dirección
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Ciudad" formControlName="city" required>
+                    <mat-error *ngIf="isFieldInvalid('city')">
+                        Por favor, introduzca su ciudad
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="País" formControlName="country" required>
+                    <mat-error *ngIf="isFieldInvalid('country')">
+                        Por favor, introduzca su País
+                    </mat-error>
+                </mat-form-field>
+            </form>
+            <button class="signinSubmit" mat-raised-button color="primary" (click)="onSubmit()">
+                Registrarse
+            </button>
+        </mat-card-content>
+    </mat-card>
+</div>

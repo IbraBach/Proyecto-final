@@ -1,0 +1,28 @@
+<div *ngIf="myProduct">
+    <p>
+        Detalles producto funciona
+    </p>
+        <h4>{{myProduct.productName}}</h4>
+        <div>
+            <ng-container>
+                <img width="50px" src="${imageUrl}"/>
+                <img src="{{product.imgUrl}}"  style="height:80px">
+            </ng-container>
+        </div>
+        <div>
+            <p>{{product.author}}</p>
+        </div>
+</div>
+<!--
+<div *ngIf="">
+    <div *ngFor="let product of myProducts" class="card"></div>
+        <ng-container>
+            <img src="{{product.imgUrl}}"  style="height:80px">
+        </ng-container>
+    </div>
+    <div *ngFor="let product of myProducts" class="card"></div>>
+        <h3>{{product.ProductName}}</h3>
+        <p>{{product.author}}</p>
+    </div>
+</div>
+-->

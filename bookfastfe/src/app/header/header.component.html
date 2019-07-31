@@ -1,0 +1,24 @@
+<mat-toolbar color="secundary">
+    <mat-toolbar-row>
+        <span>
+                <button class="tbar-btn" mat-button routerLink="main/welcome">INICIO</button>
+        </span>
+        <span class="fill-remaining-space">
+            <span *ngIf="isLoggedIn$">
+                <button class="tbar-btn" mat-button routerLink="/users/listingu" *ngIf="isLoggedIn$ | async as isLoggedIn">USUARIOS</button> <!--IF user.admin == true-->
+                <button class="tbar-btn" mat-button routerLink="/main/productsList" *ngIf="isLoggedIn$ | async as isLoggedIn">PRODUCTOS</button> <!--IF user.admin == true-->
+                <button class="tbar-btn" mat-button routerLink="/main/addproduct" *ngIf="isLoggedIn$ | async as isLoggedIn">AÑADIR PRODUCTO</button> <!--IF user.admin == true-->
+            </span>
+            <span *ngIf="isLoggedIn$">
+                    <button class="tbar-btn" mat-button routerLink="/login" *ngIf="isLoggedOut$ | async as isLoggedOut">ENTRAR</button> <!--IF loggedout-->
+                    <button class="tbar-btn" mat-button routerLink="/signin" *ngIf="isLoggedOut$ | async as isLoggedOut">REGISTRARSE</button> <!--IF loggedout-->
+            </span>
+            <span *ngIf="isLoggedIn$">
+                <button class="tbar-btn" mat-button routerLink="/users/me" *ngIf="isLoggedIn$ | async as isLoggedIn">YO</button>
+                <button class="tbar-btn" mat-button (click)="onLogout()" *ngIf="isLoggedIn$ | async as isLoggedIn">SALIR</button> <!--IF loggedin-->
+            </span>
+        </span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<!--</mat-toolbar> *ngIf="isLoggedIn$ | async as isLoggedIn && !onLoggedout"-->

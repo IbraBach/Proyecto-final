@@ -1,0 +1,31 @@
+<div class="productsListFinalView" style="text-align:center">
+    <div class="smartTableView">
+        <div class="smartTableTitle">
+            <h3>
+                PRODUCTS
+            </h3>
+        </div>
+        <div smarTable>
+            <ng2-smart-table [settings]="settings" (userRowSelect)="setProductSelected($event)" [source] = "myProducts" (editConfirm)="updateProduct($event)" (deleteConfirm)="deleteProduct($event)"></ng2-smart-table>
+        </div>
+    </div>
+</div>
+
+<div style="text-align:center">
+    <button class="signinSubmit" mat-raised-button color="primary" routerLink="/main/addproduct">Nuevo producto</button>
+</div>
+<!--***************************************************
+<div class="ProductDetails">
+    <h4>{{selectedProduct.productName}}</h4>
+    <div>
+        <ng-container>
+            <img width="50px" src="${imageUrl}"/>
+            <img src="{{selectedProduct.imgUrl}}"  style="height:80px">
+        </ng-container>
+    </div>
+    <div>
+        <p>{{selectedProduct.author}}</p>
+    </div>
+</div>
+-->
+<!-- *ngIf="selctedProduct"-->

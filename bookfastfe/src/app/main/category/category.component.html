@@ -1,0 +1,92 @@
+<div class="category">
+    <h5>
+        LITERATURA
+    </h5>
+    <div class="product" *ngFor="let product of myLiteratureList">
+        <div class="cover" (click)="gotoDetail(product)" style="cursor: pointer">
+            <img class="cover-img" src= {{product.imageUrl}} style="height:115px">
+        </div>
+        <div class="product-contente">
+            <div (click)="gotoDetail(product)" style="cursor: pointer">
+                {{product.productName}}<br>
+                {{product.author}}<br>
+                {{product.publicationYear}}<br>
+                {{product.price}}<br>
+            </div>
+            <div>
+                <button mat-raised-button color="primary" class="buy-button" (click)="productToCart($event)">Comprar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div  class="category">
+    <h5>
+        CLÁSICOS
+    </h5>
+    <div class="product" *ngFor="let product of myClassicList">
+        <div class="cover" (click)="SelectedProduct(product)" style="cursor: pointer" routerLink="/main/detailsp">
+            <img class="cover-img" src= {{product.imageUrl}} style="height:115px" alt="">
+        </div>
+        <div class="product-contente">
+            <div (click)="SelectedProduct(product)" style="cursor: pointer" routerLink="/main/detailsp">
+                {{product.productName}}<br>
+                {{product.author}}<br>
+                {{product.publicationYear}}<br>
+                {{product.price}}<br>
+            </div>
+            <div>
+                <button mat-raised-button color="primary" class="buy-button" (click)="productToCart($event)">Comprar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="category">
+    <h5>
+        NOVELA
+    </h5>
+    <div class="product" *ngFor="let product of myNovelList">
+        <div class="cover" (click)="SelectedProduct(product)" style="cursor: pointer" routerLink="/main/detailsp">
+            <img class="cover-img" src= {{product.imageUrl}} style="height:115px" alt="">
+        </div>
+        <div class="product-contente">
+            <div (click)="SelectedProduct(product)" style="cursor: pointer" routerLink="/main/detailsp">
+                {{product.productName}}<br>
+                {{product.author}}<br>
+                {{product.publicationYear}}<br>
+                {{product.price}}<br>
+            </div>
+            <div>
+                <button mat-raised-button color="primary" class="buy-button" (click)="productToCart($event)">Comprar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div  class="category">
+    <div class="div-title">
+        <h5>
+            OTRAS CATEGORÍAS
+        </h5>
+    </div>
+    <div class="product" *ngFor="let product of myOthersList">
+        <div class="cover" (click)="SelectedProduct(product)" style="cursor: pointer" routerLink="/main/detailsp">
+            <img class="cover-img" src= {{product.imageUrl}} style="height:115px" alt="">
+        </div>
+        <div class="product-contente">
+            <div (click)="SelectedProduct(product)" style="cursor: pointer" routerLink="/main/detailsp">
+                {{product.productName}}<br>
+                {{product.author}}<br>
+                {{product.publicationYear}}<br>
+                {{product.price}}<br>
+            </div>
+            <div>
+                <button mat-raised-button color="primary" class="buy-button" (click)="productToCart($event)">Comprar</button>
+            </div>
+        </div>    
+    </div>
+</div>

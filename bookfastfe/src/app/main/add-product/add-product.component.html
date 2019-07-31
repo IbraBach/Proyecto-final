@@ -1,0 +1,62 @@
+<div class="signin-content" style="text-align: center">
+    <mat-card>
+        <mat-card-content class="signinCardContent">
+            <form [formGroup]="productsForm" (ngSubmit)="onSubmit()">
+                <h4>
+                    Añadir nuevo producto
+                </h4>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Url de imagen" formControlName="imageUrl" required>
+                    <mat-error *ngIf="isFieldInvalid('imageUrl')">
+                        Por favor, introduzca una imagen
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Nombre de producto" formControlName="productName" required>
+                    <mat-error *ngIf="isFieldInvalid('productName')">
+                        Por favor, un nombre para el producto
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Autor" formControlName="author" required>
+                    <mat-error *ngIf="isFieldInvalid('author')">
+                        Por favor, introduzca un autor
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Año" type="text" formControlName="publicationYear" required>
+                    <mat-error *ngIf="isFieldInvalid('publicationYear')">
+                        Por favor, introduzca una año
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Precio" formControlName="price" required>
+                    <mat-error *ngIf="isFieldInvalid('price')">
+                        Por favor, introduzca un precio
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Deescripción" formControlName="description" required>
+                    <mat-error *ngIf="isFieldInvalid('description')">
+                        Por favor, introduzca una breve descripción
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Calificación" formControlName="starRating" required>
+                    <mat-error *ngIf="isFieldInvalid('starRating')">
+                        Por favor, introduzca una calificación
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Categoria" formControlName="category" required>
+                    <mat-error *ngIf="isFieldInvalid('category')">
+                        Por favor, introduzca una categoría
+                    </mat-error>
+                </mat-form-field>
+            </form>
+            <button class="signinSubmit" mat-raised-button color="primary" (click)="onSubmit()">
+                Añadir producto
+            </button>
+        </mat-card-content>
+    </mat-card>
+</div>

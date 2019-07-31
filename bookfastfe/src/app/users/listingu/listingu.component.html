@@ -1,0 +1,96 @@
+<div style="text-align:center">
+    <h3>
+        USERS
+    </h3>
+    <ng2-smart-table [settings]="settings" [source] = "myUsers" (editConfirm)="onEditConfirm($event)" (createConfirm)="createUser($event)" (deleteConfirm)="deleteUser($event)"></ng2-smart-table>
+</div>
+
+<!-- 
+
+<div *ngFor="let user of myUsers" class="card">
+    
+    <div class='card-header' style="text-align: center">
+        <h3>
+            USERS
+        </h3>
+    </div>
+    <div class='card-body'>
+        <div class='row'>
+            <div class='col-md-2'>Filter by:</div>
+            <div class='col-md-4'>
+                <input type='text' [(ngModel)]='listFilter'/>
+            </div>
+        </div>
+        <div class='row' *ngIf='listFilter'>
+            <div class='col-md-6'>
+                <p>Filtered by: {{listFilter}}</p>
+            </div>
+        </div>
+        <div class='table-responsive'>
+            <table class='table'>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let user of filteredmyUsers'>
+                        <td>
+                            <img src= {{user.imgUrl}}  style="height:70px">
+                        </td>
+                        <td>
+                            <a [routerLink]="['/users', user.userId]">
+                            {{ user.name }}
+                            </a>
+                        </td>
+                        <td>
+                            {{ user.fullName }}    
+                        </td>
+                        <td>
+                            {{ user.phoneNumber }}
+                        </td>
+                        <td>
+                            {{ user.email }}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+            <div class="userImg">
+                <ng-container>
+                    <img src={{user.imgUrl}}  style="height:80px">
+                </ng-container>
+            </div>
+            <div class='row'>
+                <div class='col-md-8'>
+                    <div class='row'>
+                        <div class='col-md-4'>
+                            Name:
+                        </div>
+                        <div class='col-md-8'>
+                            {{user.name}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-8'>
+                    <div class='row'>
+                        <div class='col-md-4'>
+                            Phone:
+                        </div>
+                        <div class='col-md-8'>
+                            {{user.phoneNumber}}
+                        </div>
+                    </div>
+                </div>
+            </div>    
+ -->

@@ -1,0 +1,9 @@
+{
+  "name": "dsShoppingCart",
+  "connector": "kv-redis",
+  "url": "",
+  "host": "localhost",
+  "port": 8080,
+  "password": "",
+  "db": null
+}
